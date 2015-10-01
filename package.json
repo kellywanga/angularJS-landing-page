@@ -1,0 +1,13 @@
+{
+  "name": "b2-landing",
+  "version": "1.0.0",
+  "description": "Base Two Landing Page",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
+}

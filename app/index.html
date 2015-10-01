@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="page" id="AngularJS">
+
+      <div data-anijs="if: click, on: .title, do: rotateIn animated, to: #angular-logo"></div>
+
+      <div data-anijs="if: click, on: .page, do: $toggleClass bg, to: .page"></div>
+      <div data-anijs="if: click, on: .page, do: $toggleClass intro-bg, to: .intro__media"></div>
+      <div data-anijs="if: click, on: .page, do: pulse animated, to: #menu"></div>
+
+      <div data-anijs="if: click, on: #menu, do: $removeClass bg, to: .page"></div>
+      <div data-anijs="if: click, on: #menu, do: $removeClass intro-bg, to: .intro__media"></div>
+
+<!-- Logo -->
+
+      <span id="logo"
+            class="b2-logo" 
+            data-anijs="if: mouseover, do: pulse animated;">
+            <img src="images/logo-white.svg" />
+      </span>
+
+      <img id="logo-menu"
+           class="page__logo hide" 
+           src="images/logo-angularjs-nav.png" 
+           data-anijs="if: mouseover, do: pulse animated" />
+
+<!-- Menu -->
+
+      <span id="menu" class="page__menu menu">
+        <i class="fa fa-chevron-circle-down" data-anijs="if: mouseover, do: pulse animated"></i>
+      </span>
+
+      <span id="menu-menu" class="page__menu hide">
+        <i class="fa fa-chevron-circle-up fa-inverse" data-anijs="if: mouseover, do: pulse animated"></i>
+      </span> 
+
+      <span id="reset" class="page__reset hide">
+        <a href="."><i class="fa fa-refresh" data-anijs="if: mouseover, do: pulse animated"></i></a>
+      </span>
+
+<!-- intro slide -->
+  
+      <section id="intro-slide" class="intro">
+        <div class="intro__text">
+          <h1 class="title">AngularJS</h1>
+
+          <h2 class="subtitle" id="development"
+              data-anijs="if: mouseover, do: pulse animated;
+                          if: click, do: bounceOutLeft animated, after: emit Notifier.development">
+              Application Development <i class="fa fa-code fa-inverse"></i></h2>
+          
+          <h2 class="subtitle hide" id="training"
+              data-anijs="if: mouseover, do: pulse animated;
+                          if: click, do: rollOut animated, after: emit Notifier.training">
+              Training Bootcamps<i class="fa fa-code-fork fa-inverse"></i></i></h2>
+          
+          <h2 class="subtitle hide" 
+              id="consulting"
+              data-anijs="if: mouseover, do: pulse animated;
+                          if: click, do: zoomOutLeft animated, after: emit Notifier.consulting">
+              Consulting Services<i class="fa fa-shield fa-inverse"></i></h2>
+          
+          <h2 class="subtitle hide" 
+              id="expertise"
+              data-anijs="if: mouseover, do: pulse animated;
+                          if: click, do: rotateOut animated, after: emit Notifier.start-end">
+              Expert Guidance <i class="fa fa-rocket fa-inverse"></i></h2>
+
+          <h2 class="subtitle hide" 
+              id="wedoit"
+              data-anijs="if: mouseover, do: bounce animated, to: #doubledown">
+              <a class="menu" href="#">
+
+              Learn about our services<i id="doubledown" class="fa fa-angle-double-down fa-inverse"></i></a></h2>
+        </div>
+        
+<!-- Media Angular Logo -->
+
+        <div class="intro__media">
+          <img id="angular-logo"
+               src="images/logo-angularjs.png" 
+               data-anijs="if: mouseover, do: tada animated;
+                           if: click, do: hinge animated, after: emit Notifier.start-end" />
+        </div>
+      </section>
+            
+      <div class="page__footer"></div>
+      <div class="below-the-fold"></div>
+    </div>
+
+<!-- Cards / menu -->
+    <div data-anijs="
+      if: mouseover, on: article, do: pulse animated, to: target;
+    "></div>
+
+    <div class="card-wrapper hide">
+      <article class="card">
+        <div class="card__title">
+          <h2>Development <i class="fa fa-code"></i></h2>
+          <h3>Hire us to build it!</h3>
+        </div>
+        <div class="card__supporting-text">
+          Learn about how we can help build applications using AngularJS.
+        </div>
+        <div class="card__actions">
+          <a href="#">Read a case study <i class="fa fa-arrow-circle-o-right"></i></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__title">
+          <h2>Training <i class="fa fa-code"></i></h2>
+          <h3>We can teach you!</h3>
+        </div>
+        <div class="card__supporting-text">
+          We develop curriculum tailored to your organization.
+        </div>
+        <div class="card__actions">
+          <a href="#">Read a case study <i class="fa fa-arrow-circle-o-right"></i></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__title">
+          <h2>Consulting <i class="fa fa-code"></i></h2>
+          <h3>Let us join the team!</h3>
+        </div>
+        <div class="card__supporting-text">
+          Learn about how we can help build applications using AngularJS.
+        </div>
+        <div class="card__actions">
+          <a href="#">Read a case study <i class="fa fa-arrow-circle-o-right"></i></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__title">
+          <h2>Expertise <i class="fa fa-code"></i></h2>
+          <h3>We can help build a roadmap.</h3>
+        </div>
+        <div class="card__supporting-text">
+          Learn about how we can help build applications using AngularJS.
+        </div>
+        <div class="card__actions">
+          <a href="#">Flip this card <i class="fa fa-arrow-circle-o-right"></i></a>
+        </div>
+      </article>
+
+      <div class="page__share" data-anijs="if: mouseover, do: pulse animated, to: #share">
+        <i id="share" class="fa fa-share-alt fa-inverse"></i>
+      </div>
+
+    </div><!-- Page end --> 
+
+<!-- DATA intro subtitle event listeners -->
+
+    <div data-anijs="
+      if: development, on: $Notifier, do: $toggleClass hide, to: #development;
+      if: development, on: $Notifier, do: $toggleClass hide, to: #training;
+    "></div>
+
+    <div data-anijs="
+      if: training, on: $Notifier, do: $toggleClass hide, to: #training;
+      if: training, on: $Notifier, do: $toggleClass hide, to: #consulting;
+    "></div>
+
+    <div data-anijs="
+      if: consulting, on: $Notifier, do: $toggleClass hide, to: #consulting;
+      if: consulting, on: $Notifier, do: $toggleClass hide, to: #expertise;
+    "></div>
+
+    <div data-anijs="
+      if: start-end, on: $Notifier, do: $addClass hide, to: .subtitle;
+      if: start-end, on: $Notifier, do: $removeClass hide, to: #wedoit;
+      if: start-end, on: $Notifier, do: $removeClass hide, to: #reset;
+    "></div>
+    
+<!-- DATA menu notifiers -->
+
+    <div data-anijs="
+      if: click, on: .menu, do: fadeOutUp animated, to: #intro-slide, after: emit Notifier.menu;
+    "></div>
+
+    <div data-anijs="
+      if: menu, on: $Notifier, do: $toggleClass hide, to: .card-wrapper;
+      if: menu, on: $Notifier, do: bounceInUp animated, to: .card-wrapper;
+      if: menu, on: $Notifier, do: $toggleClass hide, to: .page__menu;
+      if: menu, on: $Notifier, do: $toggleClass hide, to: #logo;
+      if: menu, on: $Notifier, do: $toggleClass hide, to: #logo-menu;
+    "></div>
+
+    <div data-anijs="
+      if: click, on: #menu-menu, do: bounceOutDown animated, to: .card-wrapper, after: emit Notifier.menu-menu;
+    "></div>
+    
+    <div data-anijs="
+      if: menu-menu, on: $Notifier, do: $toggleClass hide, to: .card-wrapper;
+      if: menu-menu, on: $Notifier, do: fadeInDown animated, to: #intro-slide;
+      if: menu-menu, on: $Notifier, do: $toggleClass hide, to: .page__menu;
+      if: menu-menu, on: $Notifier, do: $toggleClass hide, to: #logo;
+      if: menu-menu, on: $Notifier, do: $toggleClass hide, to: #logo-menu;
+    "></div>
+
+
+    <script src="http://cdn.jsdelivr.net/anijs/0.9.3/anijs-min.js"></script>
+    <script src="http://cdn.jsdelivr.net/anijs/0.9.3/helpers/dom/anijs-helper-dom-min.js"></script>
+  </body>
+</html>
+
